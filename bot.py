@@ -13,13 +13,12 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 token = str(os.getenv('TOKEN'))
 
-print(f'This is my Ec2_metadata.region:', ec2_metadata.region)
-print(f'This is my Ec2_metadata.instance.id:', ec2_metadata.instance_id)
 
 @client.event #<--Fix
 async def on_ready():
     print("Logged in as a bot {0.user}".format(client))
-
+    print(f'This is my Ec2_metadata.region:', ec2_metadata.region)
+    print(f'This is my Ec2_metadata.instance.id:', ec2_metadata.instance_id)
 
 @client.event
 async def on_message(message):
