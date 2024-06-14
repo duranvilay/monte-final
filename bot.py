@@ -43,7 +43,7 @@ async def on_message(message):
             await message.channel.send(f'Sooner! {username}')
             
          
-        elif user_message.lower() == "EC2 Data":
+        elif user_message.lower() == "ec2 data":
             await message.channel.send("Your instance data is" + ec2_metadata.region)
         
 
