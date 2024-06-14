@@ -13,8 +13,8 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 token = str(os.getenv('TOKEN'))
 
-#print(ec2_metadata.region)
-#print(ec2_metadata.instance_id)
+print(ec2_metadata.region)
+print(ec2_metadata.instance_id)
 
 @client.event #<--Fix
 async def on_ready():
@@ -36,8 +36,8 @@ async def on_message(message):
     
     
     if channel == "hi":
-        if user_message.lower() == "hello" or user_message.lower() == "hello":
-            await message.channel.send(f"Sooner! {username} Your EC2 Data: {ec2_metadata.region}")
+        if user_message.lower() == "test" or user_message.lower() == "test":
+            await message.channel.send(f"okay! {username} Your EC2 Data: {ec2_metadata.region}")
             return 
         
         elif user_message.lower() == "hello?":
