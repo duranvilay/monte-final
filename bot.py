@@ -13,8 +13,8 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 token = str(os.getenv('TOKEN'))
 
-print(ec2_metadata.region)
-print(ec2_metadata.instance_id)
+print(f'This is my Ec2_metadata.region:', ec2_metadata.region)
+print(f'This is my Ec2_metadata.instance.id:', ec2_metadata.instance_id)
 
 @client.event #<--Fix
 async def on_ready():
